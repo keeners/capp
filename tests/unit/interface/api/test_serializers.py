@@ -48,3 +48,18 @@ def test_get_all_speakers(
     serializer = serializers.SpeakerSerializer(speakers, many=True, context=context)
     response.data == serializer.data
     response.status_code == status.HTTP_200_OK
+
+
+@pytest.mark.django_db
+def test_get_all_categories(
+    client: Client, category_factory: factories.CategoryFactory
+) -> None:
+    """Test serializer returns categories."""
+    category_factory(name="One")
+    category_factory(name="Two")
+    category_factory(name="Three")
+    response = client.get("/api/categories/")
+    categories = models.Category.objects.all()
+    serializer = serializers.CategorySerializer(categories, many=True)
+    response.data == serializer.data
+    response.status_code == status.HTTP_200_OK

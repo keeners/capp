@@ -39,3 +39,11 @@ class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:  # noqa: D106
         model = models.Speaker
         fields = ("id", "user", "talk")
+
+
+class CategorySerializer(serializers.HyperlinkedModelSerializer):
+    """Category serializer."""
+
+    class Meta:  # noqa: D106
+        model = models.Category
+        fields = ("id", "name")
