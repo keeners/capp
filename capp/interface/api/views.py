@@ -25,15 +25,8 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.GroupSerializer
 
 
-class TechGroupViewSet(viewsets.ModelViewSet):
-    """API endpoint that allows tech groups to be viewed or edited."""
+class TalkViewSet(viewsets.ModelViewSet):
+    """API endpoint that allows talks to be viewed or edited."""
 
-    queryset = models.TechGroup.objects.all()
-    serializer_class = serializers.TechGroupSerializer
-
-
-class MembershipViewSet(viewsets.ModelViewSet):
-    """API endpoint that shows user/group membership."""
-
-    queryset = models.Membership.objects.all()
-    serializer_class = serializers.MembershipSerializer
+    queryset = models.Talk.objects.all()
+    serializer_class = serializers.TalkSerializer

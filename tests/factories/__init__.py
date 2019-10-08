@@ -1,3 +1,2 @@
-from .membership import MembershipFactory
-from .tech_group import TechGroupFactory
+from .talk import TalkFactory
 from .user import SuperUserFactory, UserFactory
