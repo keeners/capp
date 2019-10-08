@@ -23,32 +23,13 @@ def context() -> Dict:
 
 
 @pytest.mark.django_db
-def test_get_all_tech_groups(
-    client: Client, tech_group_factory: factories.TechGroupFactory
-) -> None:
-    """Test serializer returns tech groups."""
-    tech_group_factory(name="One")
-    tech_group_factory(name="Two")
-    tech_group_factory(name="Three")
-    response = client.get("/api/techgroups/")
-    tech_groups = models.TechGroup.objects.all()
-    serializer = serializers.TechGroupSerializer(tech_groups, many=True)
-    response.data == serializer.data
-    response.status_code == status.HTTP_200_OK
-
-
-@pytest.mark.django_db
-def test_get_all_memberships(
-    client: Client, membership_factory: factories.MembershipFactory, context: Dict
-) -> None:
-    """Test serializer returns memberships."""
-    membership_factory()
-    membership_factory()
-    membership_factory()
-    response = client.get("/api/memberships/")
-    memberships = models.Membership.objects.all()
-    serializer = serializers.MembershipSerializer(
-        memberships, many=True, context=context
-    )
+def test_get_all_talks(client: Client, talk_factory: factories.TalkFactory) -> None:
+    """Test serializer returns talks."""
+    talk_factory(name="One")
+    talk_factory(name="Two")
+    talk_factory(name="Three")
+    response = client.get("/api/talks/")
+    talks = models.Talk.objects.all()
+    serializer = serializers.TalkSerializer(talks, many=True)
     response.data == serializer.data
     response.status_code == status.HTTP_200_OK

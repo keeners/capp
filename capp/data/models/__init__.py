@@ -1,3 +1,2 @@
-from .membership import Membership
-from .tech_group import TechGroup
+from .talk import Talk
 from .user import User
