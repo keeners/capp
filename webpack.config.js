@@ -6,10 +6,10 @@ var proxyServer = docker ? "http://backend:8000" : "http://localhost:8000"
 module.exports = {
   mode: "development",
   context: __dirname,
-  entry: "./techmeet/static/app/index",
+  entry: "./capp/static/app/index",
   devtool: "cheap-module-eval-source-map",
   output: {
-    path: path.resolve(__dirname, "techmeet/static/bundles"),
+    path: path.resolve(__dirname, "capp/static/bundles"),
     filename: "[name].js",
     publicPath: "/static/bundles/",
   },
@@ -28,7 +28,7 @@ module.exports = {
     rules: [
       {
         test: /\.m?jsx?$/,
-        include: path.resolve(__dirname, "techmeet/static/app"),
+        include: path.resolve(__dirname, "capp/static/app"),
         loaders: ["babel-loader"],
       },
       {
@@ -46,7 +46,7 @@ module.exports = {
     modules: ["node_modules"],
     extensions: [".js", ".jsx"],
     alias: {
-      "@": path.resolve(__dirname, "techmeet/static/app"),
+      "@": path.resolve(__dirname, "capp/static/app"),
     },
   },
   stats: "minimal",

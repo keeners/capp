@@ -1,8 +1,8 @@
 {
-  "name": "techmeet",
+  "name": "capp",
   "version": "1.0.0",
-  "description": "Client for techmeet app",
-  "main": "techmeet/static/app/index.js",
+  "description": "Client for capp app",
+  "main": "capp/static/app/index.js",
   "dependencies": {
     "axios": "^0.18.1",
     "react": "^16.8.4",
@@ -34,13 +34,13 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.config.js",
-    "lint": "eslint --ext .js,.jsx ./techmeet/static/app/",
-    "lint:fix": "eslint --ext .js,.jsx --fix ./techmeet/static/app/",
+    "lint": "eslint --ext .js,.jsx ./capp/static/app/",
+    "lint:fix": "eslint --ext .js,.jsx --fix ./capp/static/app/",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keeners/techmeet.git"
+    "url": "git+https://github.com/keeners/capp.git"
   },
   "keywords": [
     "django",
@@ -50,9 +50,9 @@
   "author": "Bryan Hyshka <bryan@hyshka.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/keeners/techmeet/issues"
+    "url": "https://github.com/keeners/capp/issues"
   },
-  "homepage": "https://github.com/keeners/techmeet#readme",
+  "homepage": "https://github.com/keeners/capp#readme",
   "jest": {
     "moduleFileExtensions": [
       "js",
@@ -62,8 +62,8 @@
       "node_modules"
     ],
     "moduleNameMapper": {
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/techmeet/static/app/tests/unit/mocks/fileMock.js",
-      "^@/(.*)$": "<rootDir>/techmeet/static/app/$1"
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/capp/static/app/tests/unit/mocks/fileMock.js",
+      "^@/(.*)$": "<rootDir>/capp/static/app/$1"
     }
   }
 }

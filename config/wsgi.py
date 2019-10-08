@@ -1,4 +1,4 @@
-"""WSGI config for techmeet project.
+"""WSGI config for capp project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 """

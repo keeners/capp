@@ -1,11 +1,11 @@
-"""Django settings for techmeet project."""
+"""Django settings for capp project."""
 
 import sys
 from pathlib import Path
 
 SETTINGS_FILE = Path(__file__)
 BASE_DIR = SETTINGS_FILE.parent.parent.parent
-PROJECT_DIR = BASE_DIR / "techmeet"
+PROJECT_DIR = BASE_DIR / "capp"
 
 sys.path.insert(0, str(PROJECT_DIR))
 
