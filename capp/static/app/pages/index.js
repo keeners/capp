@@ -1,8 +1,9 @@
 import React, { Component } from "react"
+import { Heading } from "react-bulma-components/dist"
 
 const Index = props => (
   <div>
-    <h1>Index</h1>
+    <Heading>Homepage</Heading>
   </div>
 )
 

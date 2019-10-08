@@ -3,12 +3,12 @@ import styled from "styled-components"
 
 import Query from "@/components/Query"
 
-const SINGLE_TECHGROUP_QUERY = "getTechgroup"
+const SINGLE_TALK_QUERY = "getTalk"
 
-class Techgroup extends Component {
+class Talk extends Component {
   render() {
     return (
-      <Query query={SINGLE_TECHGROUP_QUERY} variables={{ id: this.props.id }}>
+      <Query query={SINGLE_TALK_QUERY} variables={{ id: this.props.id }}>
         {({ data, error, loading }) => {
           if (loading) return <p>Loading...</p>
           if (error) return <p>Error: {error.message}</p>
@@ -30,4 +30,4 @@ class Techgroup extends Component {
   }
 }
 
-export default Techgroup
+export default Talk

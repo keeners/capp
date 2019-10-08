@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 
 const Meta = () => (
   <Helmet>
-    <title>Techmeet App</title>
+    <title>Capp - Conference App</title>
   </Helmet>
 )
 

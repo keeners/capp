@@ -1,9 +1,10 @@
 import React, { Component } from "react"
+import { Heading } from "react-bulma-components/dist"
 import UsersList from "@/components/Users"
 
 const Users = props => (
   <div>
-    <h1>Users</h1>
+    <Heading>Users</Heading>
     <UsersList />
   </div>
 )

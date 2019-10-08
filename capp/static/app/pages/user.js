@@ -1,9 +1,10 @@
 import React, { Component } from "react"
+import { Heading } from "react-bulma-components/dist"
 import UserDetails from "@/components/User"
 
 const User = props => (
   <div>
-    <h1>User ID: {props.match.params.id}</h1>
+    <Heading>User ID: {props.match.params.id}</Heading>
     <UserDetails id={props.match.params.id} />
   </div>
 )
