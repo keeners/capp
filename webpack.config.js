@@ -44,7 +44,7 @@ module.exports = {
   plugins: [new webpack.HotModuleReplacementPlugin()],
   resolve: {
     modules: ["node_modules"],
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".css"],
     alias: {
       "@": path.resolve(__dirname, "capp/static/app"),
     },

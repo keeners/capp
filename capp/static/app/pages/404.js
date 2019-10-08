@@ -1,8 +1,9 @@
 import React, { Component } from "react"
+import { Heading } from "react-bulma-components/dist"
 
 const NotFound = props => (
   <div>
-    <h1>404 Not Found</h1>
+    <Heading>404 Not Found</Heading>
   </div>
 )
 

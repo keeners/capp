@@ -3,9 +3,9 @@ import styled from "styled-components"
 
 import Query from "@/components/Query"
 
-const ALL_ITEMS_QUERY = "getTechgroups"
+const ALL_ITEMS_QUERY = "getTalks"
 
-class Techgroups extends Component {
+class Talks extends Component {
   render() {
     return (
       <Query query={ALL_ITEMS_QUERY}>
@@ -16,7 +16,7 @@ class Techgroups extends Component {
             <ul>
               {data.map(item => (
                 <li key={item.id}>
-                  <a href={`/techgroups/${item.id}/`}>
+                  <a href={`/talks/${item.id}/`}>
                     <img src={item.logo} alt="" />
                     {item.name} - {item.description}
                   </a>
@@ -30,4 +30,4 @@ class Techgroups extends Component {
   }
 }
 
-export default Techgroups
+export default Talks

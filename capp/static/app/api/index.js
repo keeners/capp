@@ -7,18 +7,18 @@ export default {
   getUsers() {
     return session.get("/api/users/")
   },
-  getUser({id}) {
+  getUser({ id }) {
     return session.get(`/api/users/${id}/`)
   },
 
   /*
-   * Techgroups
+   * Talks
    */
-  getTechgroups() {
-    return session.get("/api/techgroups/")
+  getTalks() {
+    return session.get("/api/talks/")
   },
-  getTechgroup({id}) {
-    return session.get(`/api/techgroups/${id}/`)
+  getTalk({ id }) {
+    return session.get(`/api/talks/${id}/`)
   },
 
   /*
