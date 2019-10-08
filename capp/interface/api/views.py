@@ -30,3 +30,10 @@ class TalkViewSet(viewsets.ModelViewSet):
 
     queryset = models.Talk.objects.all()
     serializer_class = serializers.TalkSerializer
+
+
+class SpeakerViewSet(viewsets.ModelViewSet):
+    """API endpoint that allows speakers to be viewed or edited."""
+
+    queryset = models.Speaker.objects.all()
+    serializer_class = serializers.SpeakerSerializer
