@@ -36,10 +36,8 @@ class User extends Component {
                     e.preventDefault()
                     // call the mutation
                     const res = await updateUser({
-                      variables: {
-                        id: this.props.id,
-                        ...this.state,
-                      },
+                      id: this.props.id,
+                      ...this.state,
                     })
                     // change them to the single item page
                     console.log("User Updated", res)
