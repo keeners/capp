@@ -24,7 +24,8 @@ class Header extends Component {
             </Navbar.Item>
           </Navbar.Container>
           <Navbar.Container position="end">
-            <Navbar.Item href="#">Login</Navbar.Item>
+            <Navbar.Item href="/api-auth/login/">Login</Navbar.Item>
+            <Navbar.Item href="/api-auth/logout/">Logout</Navbar.Item>
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>

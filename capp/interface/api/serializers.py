@@ -22,7 +22,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:  # noqa: D106
         model = Group
-        fields = ("url", "name")
+        fields = ("id", "url", "name")
 
 
 class TalkSerializer(serializers.HyperlinkedModelSerializer):
