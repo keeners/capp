@@ -6,7 +6,7 @@ import UserDetails from "@/components/User"
 const User = props => (
   <div>
     <Heading>User ID: {props.match.params.id}</Heading>
-    <Button to="/users/${props.match.params.id}/update" renderAs={Link}>
+    <Button to={`/users/${props.match.params.id}/update/`} renderAs={Link}>
       Edit User
     </Button>
     <Button>Delete User</Button>

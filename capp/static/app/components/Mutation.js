@@ -11,13 +11,14 @@ class Mutation extends Component {
       data: [],
     }
 
-    this.runMutation = async () => {
+    this.runMutation = async ({ variables }) => {
       this.setState({
         loading: true,
       })
 
+      console.log("XXX", this.props, variables)
       try {
-        const response = await api[this.props.mutation](this.props.variables)
+        const response = await api[this.props.mutation](variables)
         this.setState({
           loading: false,
           // data will have results prop only when requesting DRF ListViews,

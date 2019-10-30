@@ -13,11 +13,11 @@ export default {
   createUser({ email, name, groups }) {
     return session.post("/api/users/", { email, name, groups })
   },
-  updateUsers({ id, email, name, groups }) {
-    return session.patch(`/api/users/${id}`, { email, name, groups })
+  updateUser({ id, email, name, groups }) {
+    return session.patch(`/api/users/${id}/`, { email, name, groups })
   },
   deleteUser({ id }) {
-    return session.delete(`/api/users/${id}`)
+    return session.delete(`/api/users/${id}/`)
   },
 
   /*
