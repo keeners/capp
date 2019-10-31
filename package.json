@@ -4,6 +4,7 @@
   "description": "Client for capp app",
   "main": "capp/static/app/index.js",
   "dependencies": {
+    "core-js": "^3.3.5",
     "react": "^16.10.2",
     "react-bulma-components": "^3.1.2",
     "react-dom": "^16.10.2",
