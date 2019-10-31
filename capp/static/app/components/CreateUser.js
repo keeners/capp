@@ -5,9 +5,8 @@ import styled from "styled-components"
 import Mutation from "@/components/Mutation"
 
 const CREATE_USER_MUTATION = "createUser"
-const UPDATE_USER_MUTATION = "updateUser"
 
-class User extends Component {
+class CreateUser extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -38,7 +37,7 @@ class User extends Component {
                   // call the mutation
                   const res = await createUser()
                   // change them to the single item page
-                  console.log("User Form Submitted", res)
+                  console.log("CreateUser Submitted", res)
                   this.props.history.push(`/users/${res.id}/`)
                 }}
               >
@@ -79,4 +78,4 @@ class User extends Component {
   }
 }
 
-export default withRouter(User)
+export default withRouter(CreateUser)

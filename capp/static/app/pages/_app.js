@@ -20,8 +20,8 @@ class App extends Component {
           <Route exact path="/" component={Index} />
           <Route exact path="/users/" component={Users} />
           <Route exact path="/users/create/" component={CreateUser} />
-          <Route path="/users/:id/" component={User} />
-          <Route path="/users/:id/update/" component={UpdateUser} />
+          <Route exact path="/users/:id/" component={User} />
+          <Route exact path="/users/:id/update/" component={UpdateUser} />
           <Route exact path="/talks/" component={Talks} />
           <Route path="/talks/:id" component={Talk} />
           <Route component={NotFound} />
