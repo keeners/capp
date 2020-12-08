@@ -28,5 +28,5 @@ lint: ## Run linters on code
 lint_frontend: ## Run linters on code
 	docker-compose -p capp exec frontend bash -c "npm run --silent lint"
 
-make test: ## Run tests
+test: ## Run tests
 	docker-compose -p capp exec backend bash -c "pytest tests --cov=capp"
